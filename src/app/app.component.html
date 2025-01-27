@@ -1,0 +1,32 @@
+1. Date Pipes <br>
+Short Date Format: {{ currentDate | date:'M/d/yy' }} <br>
+Full Date Format: {{ currentDate | date:'EEEE, MMMM d, y' }} <br>
+Custom Date (MM/dd/yyyy): {{ currentDate | date:'MM/dd/yyyy' }} <br>
+Short Time Format: {{ currentDate | date:'h:mm a' }} <br>
+Day of the Year: {{ currentDate | date:'D' }} <br>
+Week of the Year: {{ currentDate | date:'w' }} <br>
+<br>
+2. Currency Pipes <br>
+USD Standard: {{ price | currency:'USD':'symbol':'1.2-2' }} <br>
+USD with Currency Code: {{ price | currency:'USD':'code':'1.2-2' }} <br>
+INR Format: {{ price | currency:'INR':'symbol':'1.2-2' }} <br>
+GBP Format: {{ price | currency:'GBP':'symbol':'1.2-2' }} <br>
+<br>
+3. Async Pipes <br>
+Array Stream: {{ arrayStream$ | async }} <br>
+Transformed Object: {{ transformedData$ | async }} <br>
+<br>
+4. JSON Pipes <br>
+Nested Arrays: <pre>{{ nestedArrays | json }}</pre> <br>
+Complex Object: <pre>{{ complexData | json }}</pre> <br>
+Mixed Data Types: <pre>{{ mixedTypes | json }}</pre> 
+<br>
+5. Slice Pipes <br>
+Middle Elements: {{ numbers | slice:3:6 }} <br>
+Negative Start: {{ numbers | slice:-3 }} <br>
+Last Two Characters: {{ longString | slice:-2 }} <br>
+First Five Characters: {{ longString | slice:0:5 }}
+
+
+
+<router-outlet />
